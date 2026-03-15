@@ -8,7 +8,7 @@ Install and configure database (mysql)
 Installation Steps:
 
 Open your terminal and run the following command to update your local package list: >> sudo apt update
-Install MySQL server: Install the mysql-server package from the Ubuntu repositories: >> sudo apt install mysql-server
+Install MySQL server:  >> sudo apt install mysql-server
 The MySQL service starts automatically after installation. You can verify its status with: >> sudo systemctl status mysql.service
 
 Configuration Steps:
@@ -44,6 +44,27 @@ CREATE TABLE USERS(ID INT,Uname VARCHAR(100),DOB VARCHAR(20),PSSWD VARCHAR(20),D
 exit;
 
 It is strongly recomented to follow above structure.You can change it after understanding the source codes.
+
+Install and configure apache2
+
+Install MySQL server :  >> sudo apt install apache2
+Verify the Installation : >> sudo systemctl status apache2
+Alluw firefall : >> sudo ufw allow 'Apache Full'
+
+Install and setup PHP
+
+Install PHP and Common Modules : >> sudo apt install php libapache2-mod-php php-mysql
+
+Now copy all php files to /var/www/html/ by running >> sudo cp *.php /var/www/html/  (open terminal on the cloned folder)
+
+Now its almost done. Open any browser and type the url (localhost/Register.php)
+It will open the Registeraion page now you can create user accounts. You should create an account with user name as 'GROUP' where you can do the group chats. (It is necessory)
+
+After clicking 'Register' you will redirect to the login page where you can login using the username and password.
+After clicking login you will redirect to the chat page ui.Where you can see your name and 'GROUP' as users.
+
+Now explore the UI.
+
 
 
 
