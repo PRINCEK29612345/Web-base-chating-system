@@ -287,7 +287,7 @@ function renderMsg($msg, $tmt, $type, $dir, $isSent, $senderLabel = '') {
 if (!empty($receiver) && !empty($sender)) {
 
     /* ── Private chat ── */
-    if ($receiver !== 'TTLS') {
+    if ($receiver !== 'GROUP') {
         $stmt = $pdo->prepare("SELECT * FROM `{$sender}` ORDER BY ID ASC");
         $stmt->execute();
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -317,9 +317,9 @@ if (!empty($receiver) && !empty($sender)) {
             }
         }
 
-    /* ── Group chat (TTLS) ── */
+    /* ── Group chat (GROUP) ── */
     } else {
-        $stmt3 = $pdo->prepare("SELECT * FROM TTLS ORDER BY ID ASC");
+        $stmt3 = $pdo->prepare("SELECT * FROM GROUP ORDER BY ID ASC");
         $stmt3->execute();
         $rows3 = $stmt3->fetchAll(PDO::FETCH_ASSOC);
 
