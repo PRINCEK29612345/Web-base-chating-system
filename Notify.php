@@ -35,12 +35,12 @@ if(!empty($sender)) {
             }
         }
 
-        /*$Q4 = "SELECT MAX(ID) FROM TTLS";
+        $Q4 = "SELECT MAX(ID) FROM GROUP";
         $stmt4 = $pdo->prepare($Q4);
         $stmt4->execute();
         $val4 = $stmt4->fetchColumn();
 
-        $Q5 = "SELECT * FROM TTLS WHERE ID=:id";
+        $Q5 = "SELECT * FROM GROUP WHERE ID=:id";
         $stmt5 = $pdo->prepare($Q5);
         $params5 = array(
             ':id' => $val4,
@@ -51,12 +51,12 @@ if(!empty($sender)) {
             //echo "hi".$row['RECEIVER'];
             //echo "hi".$result['RECEIVER'];
             if($row5['SENDER'] != $sender ) {
-                echo "TTLS : ".$row5['SENDER']." : ".$row5['DATA'];
+                echo "GROUP : ".$row5['SENDER']." : ".$row5['DATA'];
             }
             else {
                 echo "";
             }
-        }*/
+        }
 
 
 
