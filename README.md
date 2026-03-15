@@ -43,7 +43,7 @@ USE RECORD;
 CREATE TABLE USERS(ID INT,Uname VARCHAR(100),DOB VARCHAR(20),PSSWD VARCHAR(20),DP VARCHAR(50));
 exit;
 
-It is strongly recomented to follow above structure.You can change it after understanding the source codes.
+It is strongly recommended to follow the above structure.You can change it after understanding the source codes.
 
 Install and configure apache2
 
@@ -58,7 +58,7 @@ Install PHP and Common Modules : >> sudo apt install php libapache2-mod-php php-
 Now copy all php files to /var/www/html/ by running >> sudo cp *.php /var/www/html/  (open terminal on the cloned folder)
 
 Now its almost done. Open any browser and type the url (localhost/Register.php)
-It will open the Registeraion page now you can create user accounts. You should create an account with user name as 'GROUP' where you can do the group chats. (It is necessory)
+It will open the Registration page now you can create a user accounts. You should create an account with user name as 'GROUP' where you can do the group chats. (It is necessary)
 
 After clicking 'Register' you will redirect to the login page where you can login using the username and password.
 After clicking login you will redirect to the chat page ui.Where you can see your name and 'GROUP' as users.
